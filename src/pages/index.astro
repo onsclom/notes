@@ -1,5 +1,5 @@
 ---
-
+import App from '../App'
 ---
 
 <html lang="en">
@@ -9,8 +9,19 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style is:global>
+		  html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+			}
+			textarea {
+			  font-size: 1rem;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+	  <App client:only>
 	</body>
 </html>
